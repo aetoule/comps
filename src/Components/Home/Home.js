@@ -1,0 +1,53 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            characterList: []
+         }
+    }
+    componentDidMount() {
+        axios.get('/api/got-characters/').then( res => {
+            console.log(res.data)
+            this.setState({
+                characterList: res.data
+            })
+        }).catch(err => console.log('err', err));
+            
+            // this.setState({
+            //     characterList: res.data
+            // })
+        
+    }
+    render() { 
+        console.log(this.state.characterList)
+        let mappedCharacters = this.state.characterList.map((character, i) => {
+            return (
+                <Link to={`/character/${character.id}`}>
+                    <div className="each-character-container">
+                        <h1 className="character-name">{character.name}</h1>
+                        <p className="character-alias">Alias:  {character.alias}</p>
+                        <p className="character-played-by">Played by: {character.playedby}</p>
+                    </div>
+                </Link>
+
+            )
+        }
+            
+        )
+        return ( 
+            <div>
+                <h1>Game of Thrones Characters</h1>
+                <h2>List of characters</h2>
+                {mappedCharacters}
+                {/* <Link to="/character">See characters</Link> */}
+
+            </div>
+         );
+    }
+}
+ 
+export default Home;
