@@ -1,0 +1,61 @@
+
+
+@media (min-width: 800px) {  
+    element {
+        --main-bg-color: #484848;
+    }
+    .character-page{
+        padding: 0 40px;
+        background-color: var(--main-bg-color)
+    }
+
+    .character-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+    }
+
+    .character-img{
+        background-image: url('https://pixel.nymag.com/imgs/daily/science/2015/04/09/09-hodor.w700.h700.jpg');
+        height: 500px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 799px) {  
+    element {
+        --main-bg-color: #484848;
+    }
+    .character-page{
+        padding: 0 20px;
+        background-color: pink;
+    }
+
+    .character-img{
+        background-image: url('https://pixel.nymag.com/imgs/daily/science/2015/04/09/09-hodor.w700.h700.jpg');
+        height: 400px;
+        width: 400px;
+        object-fit: contain;
+        background-position: top;
+    }
+    .character-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .character-name-character{
+        font-size: 20px;
+    }
+    .character-alias-character {
+        font-size: 16px;
+    }
+    .character-playedby-character {
+        font-size: 12px;
+    }
+
+}
+footer {
+    height: 50px;
+    width: 100vw;
+}

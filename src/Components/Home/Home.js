@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './Home.css';
 
 class Home extends Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class Home extends Component {
             
         )
         return ( 
-            <div>
+            <div className="home-page">
                 
                 <h1>Game of Thrones Characters</h1>
                 <h2>List of characters</h2>

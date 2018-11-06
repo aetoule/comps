@@ -1,0 +1,36 @@
+.each-character-container {
+    display: grid;
+    grid-template-columns: 200px 100px auto 50px 40px;
+    grid-template-rows: 25% 100px auto;
+}
+
+.character-name {
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+.home-page {
+    padding: 0 40px;
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* a:link {
+
+} */
+/* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: blue;
+}
+a:hover { 
+    color: magenta;
+}

@@ -34,7 +34,9 @@ class Auth extends Component {
                 <h2>Login to check out a list of characters from Game of Thrones</h2>
                 <button className='login' 
                 onClick={this.login}>Login</button>
+                <img className="second-img" src="../../media/game-of-thrones-poster_85627-1920x1200.jpg" />
             </div>
+            
         );
     }
 }

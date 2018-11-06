@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Character.css';
 
 class Character extends Component {
     constructor(props) {
@@ -17,11 +18,14 @@ class Character extends Component {
     }
     render() { 
         return ( 
-            <div>
-                character page
-                <h1>{this.state.character.name}</h1>
-                <p> {this.state.character.alias}</p>
-                <p> {this.state.character.playedby}</p>
+            <div className="character-page">
+                <div className="character-img"></div>
+                <div className="character-info-container">
+                    <h1 className="character-name-character">{this.state.character.name}</h1>
+                    <p className="character-alias-character"> {this.state.character.alias}</p>
+                    <p className="character-playedby-character"> {this.state.character.playedby}</p>
+                </div>
+                <footer>Game of Thrones Characters</footer>
             </div>
          );
     }
