@@ -22,6 +22,15 @@ class Home extends Component {
             // })
         
     }
+    testLogOut() {
+        console.log('fired');
+        
+        axios.post('/api/logout')
+            .then(res => {
+                window.location.href = '/'
+            })
+            .catch(err => console.log('Err in testLogout', err))
+    }
     render() { 
         console.log(this.state.characterList)
         let mappedCharacters = this.state.characterList.map((character, i) => {
@@ -40,12 +49,14 @@ class Home extends Component {
         )
         return ( 
             <div>
+                
                 <h1>Game of Thrones Characters</h1>
                 <h2>List of characters</h2>
                 {mappedCharacters}
                 {/* <Link to="/character">See characters</Link> */}
-
+                <button onClick={this.testLogOut}>Logout</button>
             </div>
+            
          );
     }
 }
