@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import {handleUsername} from '../../redux/reducer';
 import axios from 'axios';
+import './Auth.css';
 
 class Auth extends Component {
 
@@ -28,18 +29,11 @@ class Auth extends Component {
 
     render() { 
         return (  
-            <div>
-                <div>Auth</div>
+            <div className="auth-container">
+                <h1 className="auth-title">Auth</h1>
+                <h2>Login to check out a list of characters from Game of Thrones</h2>
                 <button className='login' 
                 onClick={this.login}>Login</button>
-                {/* <h3>Username</h3> */}
-                {/* <input type="text" value={user.username} onChange={(e) => handleUsername(e.target.value)} /> */}
-                {/* <h3>Password</h3> */}
-                {/* <input type="text" value={this.handlePassword} onChange={(e) => this.handlePassword(e.target.value)} />
-                <button>Login</button>
-                <button onClick={() => this.handleRegister(user.username, this.state.password)}
-                >Register</button> */}
-
             </div>
         );
     }
